@@ -5,34 +5,34 @@
 #include <fstream>
 #include <iostream>
 
-struct piece
+struct pieceB
 {
 	QString name;
 	int flag;
 };
 
-class EXPORT_API Top
+class EXPORT_API Bottom
 {
 public:
-	Top();
-	~Top();
+	Bottom();
+	~Bottom();
 
 	void upInx();
 	void downInx();
-	void add_top(QString a);
-	void delete_top();
+	void add_bot(QString a);
+	void delete_bot();
 	QString give();
 	void fav_add();
 	void fav_del(QString);
 	int size();
 	int flags();
-	
+
 	void save();
 	void load();
 
 private:
-	std::vector<piece> tops;
+	std::vector<pieceB> bottoms;
 	int index;
-	QString filePath = "C:/Users/Studia/Desktop/AplikacjaOkienkowaJIPP/bin/Assets/Tops/";
+	QString filePath = "C:/Users/Studia/Desktop/AplikacjaOkienkowaJIPP/bin/Assets/Bottoms/";
 	QString savePath = filePath + "save_names.txt";
 };
