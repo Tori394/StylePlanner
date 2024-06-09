@@ -103,9 +103,11 @@ copy /Y "$(SolutionDir)x64\Debug\*lib" "C:\Users\Studia\Desktop\AplikacjaOkienko
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="API.h" />
+    <ClInclude Include="Bottom.h" />
     <ClInclude Include="Top.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bottom.cpp" />
     <ClCompile Include="Top.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

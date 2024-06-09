@@ -29,9 +29,15 @@
     <ClInclude Include="Top.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Bottom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Top.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bottom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

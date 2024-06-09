@@ -1,6 +1,15 @@
 #pragma once
 #include "API.h"
+#include <vector>
 #include <qstring.h>
+#include <fstream>
+#include <iostream>
+
+struct piece
+{
+	QString name;
+	int flag;
+};
 
 class EXPORT_API Top
 {
@@ -10,9 +19,20 @@ public:
 
 	void upInx();
 	void downInx();
-	QString give_top();
+	void add_top(QString a);
+	void delete_top();
+	QString give();
+	void fav_add();
+	void fav_del(QString);
+	int size();
+	int flags();
+	
+	void save();
+	void load();
 
 private:
-	QString tab[5] = {"1", "2", "3", "4", "5"};
+	std::vector<piece> tops;
 	int index;
+	QString filePath = "C:/Users/Studia/Desktop/AplikacjaOkienkowaJIPP/bin/Assets/Tops/";
+	QString savePath = filePath + "save_names.txt";
 };

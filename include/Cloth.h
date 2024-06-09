@@ -2,36 +2,24 @@
 #include "API.h"
 #include <vector>
 #include <qstring.h>
-#include <fstream>
-#include <iostream>
 
-struct piece
-{
-	QString name;
-	int flag;
-};
-
-class EXPORT_API Top
+class EXPORT_API Cloth
 {
 public:
-	Top();
-	~Top();
+	Cloth();
+	~Cloth();
 
 	void upInx();
 	void downInx();
 	void add_top(QString a);
 	void delete_top();
 	QString give();
-	void fav_add();
-	void fav_del(QString);
-	int size();
-	int flags();
 	
 	void save();
 	void load();
 
 private:
-	std::vector<piece> tops;
+	std::vector<QString> clothes;
 	int index;
 	QString filePath = "C:/Users/Studia/Desktop/AplikacjaOkienkowaJIPP/bin/Assets/Tops/";
 	QString savePath = filePath + "save_names.txt";
