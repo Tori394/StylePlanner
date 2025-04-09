@@ -33,6 +33,6 @@ public:
 private:
 	std::vector<piece> tops;
 	int index;
-	QString filePath = "C:/Users/Studia/Desktop/AplikacjaOkienkowaJIPP/bin/Assets/Tops/";
+	QString filePath = "Assets/Tops/";
 	QString savePath = filePath + "save_names.txt";
 };

@@ -48,7 +48,7 @@ void Top::add_top(QString a)
 
 	if (!QFile::copy(a, destination)) 
 	{
-		qWarning("Failed to save image");
+		qWarning("Nie udalo sie zapisac obrazu");
 		return;
 	}
 
@@ -113,7 +113,7 @@ void Top::save()
 
 	if (!wpisz.is_open()) 
 	{
-		qWarning("Failed to open save file");
+		qWarning("Nie udalo sie otworzyc pliku");
 		return;
 	}
 
@@ -132,7 +132,7 @@ void Top::load()
 
 	if (!wpisz.is_open())
 	{
-		qWarning("Failed to open file");
+		qWarning("Nie udalo sie otworzyc pliku");
 		return;
 	}
 
