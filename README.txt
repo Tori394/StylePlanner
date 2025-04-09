@@ -1,6 +1,63 @@
-Style Planner to aplikacja okienkowa pozwalająca użytkownikowi przeglądać swoją szafę z ubraniami bez otwierania jej i planować swoje stroje, zapisując ulubione kombinacje. Dodać można po 200 zdjęć górnych i dolnych części garderoby (każdy element jest strukturą posiadającą dwie składowe – nazwę, będącą ścieżką do pliku z dany zdjęciem, które zostaje skopiowane do plików programu; oraz licznik w ilu zestawach występuje). Za pomocą strzałek po bokach można przeglądać dodane zdjęcia ubrań i porównywać je ze sobą. Jeśli jakaś kombinacja przypadnie użytkownikowi do gustu może ją zapisać w ‘ulubionych’ klikając przycisk z gwiazdką. Lista z ulubionymi zestawami znajduje się w drugiej zakładce i aktualizuje się w czasie rzeczywistym (dynamicznie dodawane są nowe układy obrazów i przycisku, który usuwa dany układ – również dynamicznie i nie zaburzając kompozycji). Można też usunąć dodane wcześniej zdjęcie, ale nie może ono być częścią zestawu zapisanego w ‘ulubionych’ - należy najpierw usunąć wszystkie zestawy z nią zapisane (usunięcie sprawi, że plik też zostanie automatycznie usunięty z pamięci programu, co zapobiega powstawaniu niepotrzebnych ‘śmieci’ i umożliwia użytkownikowi dodanie tego zdjęcia ponownie). Program automatycznie zapisuje po wyjściu wszystkie dodane zdjęcia i polubione kombinacje oraz wczytuje je przy otwarciu (nazwy plików są przechowywane w plikach tekstowych)
-Obsłużone są wszystkie niebezpieczne błędy:
-- niepoprawny plik: niepoprawna nazwa, ścieżka, lub powtórzenie tego samego pliku
-- usunięcie używanego w zestawie zdjęcia
-- próba usunięcia przedmiotów, gdy żaden nie jest dodany
-Program napisany w został w C++, bazowe GUI w Qt Designer
+# 👗 Style Planner
+
+**Style Planner** is a desktop application written in C++ using Qt. It allows users to browse their wardrobe virtually, plan outfits, and save favorite combinations — all without opening the closet.
+
+---
+
+## 🧥 Key Features
+
+- Browse up to **200 images** of tops and **200 images** of bottoms
+- Each clothing item is stored as a structure containing:
+  - the file path (copied into the app's directory)
+  - a counter of how many saved outfits include the item
+
+---
+
+## ✨ Outfit Planning & Favorites
+
+- Navigate through added clothing items using arrow buttons
+- Compare tops and bottoms side-by-side
+- Save favorite outfit combinations by clicking the ⭐ button
+- Favorites are displayed in a separate tab and **update dynamically**
+- Remove individual outfits from favorites without breaking the layout
+
+---
+
+## 🗑️ Image Management
+
+- You can only delete clothing items **not used in any saved outfits**
+- When an image is removed:
+  - its file is deleted from the app’s storage
+  - it becomes available for re-adding later
+- This keeps the app clean and prevents clutter
+
+---
+
+## 💾 Data Persistence
+
+- The app **automatically saves**:
+  - added clothing items
+  - saved outfit combinations
+- Data is stored in text files and loaded back on app startup
+
+---
+
+## 🛡️ Error Handling
+
+All critical errors are properly handled:
+- Invalid files (wrong name, path, or duplicates)
+- Attempting to delete items used in saved outfits
+- Trying to remove items when none have been added
+
+---
+
+## 🧰 Technologies Used
+
+- **Language**: C++
+- **GUI**: Qt Designer
+
+---
+
+## 📸 Screenshots
+
+
