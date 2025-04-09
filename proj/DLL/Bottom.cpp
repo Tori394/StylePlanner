@@ -48,7 +48,7 @@ void Bottom::add_bot(QString a)
 
 	if (!QFile::copy(a, destination))
 	{
-		qWarning("Failed to save image");
+		qWarning("Nie udalo sie zapisac obrazu");
 		return;
 	}
 
@@ -113,7 +113,7 @@ void Bottom::save()
 
 	if (!wpiszB.is_open())
 	{
-		qWarning("Failed to open save file");
+		qWarning("Nie udalo sie otworzyc pliku");
 		return;
 	}
 
@@ -132,7 +132,7 @@ void Bottom::load()
 
 	if (!wpiszB.is_open())
 	{
-		qWarning("Failed to open file");
+		qWarning("Nie udalo sie otworzyc pliku");
 		return;
 	}
 
