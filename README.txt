@@ -1,63 +1,59 @@
-# 👗 Style Planner
+<h1 align="center">👗 Style Planner</h1>
 
-**Style Planner** is a desktop application written in C++ using Qt. It allows users to browse their wardrobe virtually, plan outfits, and save favorite combinations — all without opening the closet.
+<p align="center">
+  A virtual wardrobe manager that helps you plan outfits and save your favorite clothing combinations.
+</p>
 
----
-
-## 🧥 Key Features
-
-- Browse up to **200 images** of tops and **200 images** of bottoms
-- Each clothing item is stored as a structure containing:
-  - the file path (copied into the app's directory)
-  - a counter of how many saved outfits include the item
-
----
-
-## ✨ Outfit Planning & Favorites
-
-- Navigate through added clothing items using arrow buttons
-- Compare tops and bottoms side-by-side
-- Save favorite outfit combinations by clicking the ⭐ button
-- Favorites are displayed in a separate tab and **update dynamically**
-- Remove individual outfits from favorites without breaking the layout
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C++-blue.svg">
+  <img src="https://img.shields.io/badge/GUI-Qt-informational">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen">
+</p>
 
 ---
 
-## 🗑️ Image Management
+## 🧥 Features
 
-- You can only delete clothing items **not used in any saved outfits**
-- When an image is removed:
-  - its file is deleted from the app’s storage
-  - it becomes available for re-adding later
-- This keeps the app clean and prevents clutter
+- Browse up to **200 tops** and **200 bottoms**
+- Each item includes:
+  - a **path to the image** (copied to the app folder)
+  - a **counter** of how often it's used in outfits
+- Preview and match clothing in real-time using **arrow buttons**
+- Save outfit combinations to **Favorites** with a ⭐ click
+- View and manage favorites in a dedicated **second tab**
 
 ---
 
-## 💾 Data Persistence
+## 💾 Persistent Storage
 
-- The app **automatically saves**:
-  - added clothing items
-  - saved outfit combinations
-- Data is stored in text files and loaded back on app startup
+- All added images and favorite outfits are **automatically saved on exit**
+- Data is reloaded on the next startup from **text files**
+
+---
+
+## 🗑️ Smart File Management
+
+- Images are stored and removed efficiently:
+  - Deleting a clothing item also deletes the file from storage
+  - Prevents duplicate files and unnecessary clutter
+- You **cannot delete** an item used in any saved outfit
+  - Must remove the outfit first
 
 ---
 
 ## 🛡️ Error Handling
 
-All critical errors are properly handled:
-- Invalid files (wrong name, path, or duplicates)
-- Attempting to delete items used in saved outfits
-- Trying to remove items when none have been added
+Handled edge cases include:
+
+✅ Invalid or duplicate file paths  
+✅ Trying to remove in-use images  
+✅ Deleting when nothing is added  
 
 ---
 
-## 🧰 Technologies Used
+## 🧰 Built With
 
 - **Language**: C++
 - **GUI**: Qt Designer
-
----
-
-## 📸 Screenshots
-
+- **Framework**: Qt
 
